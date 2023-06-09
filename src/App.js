@@ -20,7 +20,13 @@ function App() {
   return (
     <div className="artjunks">
       <Hero/>
-      {artCards}
+      <section className="sectionTwo">
+      <h1 className="sectionTwo--title">Newest reads</h1>
+
+      <div className='cards--wrapper'>
+        {artCards}
+      </div>
+      </section>
     </div>
   );
 }
