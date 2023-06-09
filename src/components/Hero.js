@@ -1,17 +1,29 @@
 import Menu from '../img/Hamburger Menu.png';
-import Background from '../img/Background.png';
+import close from '../img/close.png';
+import { useState } from "react";
 
 export default function Hero() {
+
+    const [isMenuOpen, setMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+  setMenuOpen(!isMenuOpen);
+};
+
     return (
         <section className="hero">
             <header>
                 <h1 className='logo'>ARTJUNKS</h1>
-                <img src={Menu}></img>
+                <img
+                    className={isMenuOpen ? 'close-menu' : 'open-menu'}
+                    src={isMenuOpen ? close : Menu}
+                    onClick={toggleMenu}
+                    alt="Menu"
+                />
+                {isMenuOpen && (
                 <nav>
 
-                <button className='close-menu' aria-controls='primary-navbar' aria-expanded='false'>
-                    <span className='sr-only'></span>
-                </button>
+                {/* <img className='close-menu' src={close}></img> */}
                     <ul id='primary-navbar'>
                         <li>
                             <a href='#'>Home</a>
@@ -30,6 +42,7 @@ export default function Hero() {
                         </li>
                     </ul>
                 </nav>
+                  )}
             </header>
             <main className='intro'>
                 <div className='shape'></div>

@@ -35,10 +35,11 @@ ul {
   header {
     align-items: center;
     display: flex;
+    /* justify-content: space-between; */
+    padding: 1rem 1.6rem;
   }
   .logo {
     margin-right: auto;
-    margin: 1rem;
   }
 
   ul {
@@ -55,31 +56,37 @@ ul {
     /* display: none; */
     z-index: 1000;
 
-    transform: translateX(100%);
+    /* transform: translateX(100%); */
   }
 
   @supports (backdrop-filter: blur(.6rem)) {
     ul {
-      background-color: hsl(0 0% 0% / 0.1);
+      background-color: hsl(0 0% 0% / 0.3);
       backdrop-filter: blur(0.6rem);
     }
   }
-
+  .open-menu {
+    /* border: 3px solid khaki; */
+    width: 1.4rem;
+    aspect-ratio: 1;
+  }
   .close-menu {
     position: absolute;
     top: 1.5rem;
-    right: 2rem;
+    right: 1.8rem;
     z-index: 9999;
-    background: url(../src/img/Hamburger\ Menu.png);
-    width: 1.7rem;
+    width: 1.3rem;
     aspect-ratio: 1;
     outline: none;
     border: none;
   }
 
+
   a {
     text-decoration: none;
     outline: none;
+    color: aliceblue;
+    font-weight: bold;
   }
 
 
@@ -92,6 +99,11 @@ ul {
     display: inline-block;
   }
 
+  main {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 40rem;
+  }
 
 
 }
